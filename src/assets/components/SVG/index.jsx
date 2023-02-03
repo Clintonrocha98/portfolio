@@ -1,0 +1,9 @@
+export { IconGit } from "./iconGit";
+export { IconLinkedin } from "./icon-Linkedin";
+export { IconSass } from "./icon-Sass";
+export { IconCss } from "./icon-Css";
+export { IconJavascript } from "./icon-Javascript";
+export { IconHtml } from "./icon-Html";
+export { IconEye } from "./icon-Eye";
+export { IconReact } from "./icon-React";
+export { IconDownload } from "./icon-Download";

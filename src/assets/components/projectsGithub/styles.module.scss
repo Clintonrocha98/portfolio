@@ -1,0 +1,86 @@
+.containerProjects {
+  height: 100vh;
+}
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow: auto;
+  height: calc(100% - 65px);
+  padding-right: 5px;
+
+  &::-webkit-scrollbar {
+    background-color: black;
+    width: 5px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #fdfffd;
+    border-radius: 10px;
+  }
+  &:hover .project {
+    filter: blur(3px);
+    opacity: 0.5;
+    transform: scale(0.98);
+    box-shadow: none;
+  }
+  &:hover .project:hover {
+    transform: scale(1);
+    filter: blur(0px);
+    opacity: 1;
+    box-shadow: 0 8px 20px 0px rgba(0, 0, 0, 0.125);
+    background: #682b2b;
+  }
+  .project {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 3fr 1fr;
+    gap: 10px;
+    padding: 10px;
+    width: 100%;
+    border: 5px solid gray;
+    border-radius: 10px;
+
+    font-family: "Roboto", sans-serif;
+    h2 {
+      font-weight: 600;
+      font-size: 2rem;
+      text-transform: capitalize;
+      line-height: 2rem;
+    }
+    p {
+      margin-top: 10px;
+      font-size: 1.3rem;
+      text-transform: capitalize;
+      font-weight: 500;
+    }
+    .containerLinks {
+      display: grid;
+      justify-items: center;
+      .links {
+        display: flex;
+        gap: 5px;
+      }
+      .warrapIcons {
+        display: flex;
+        gap: 5px;
+      }
+    }
+  }
+  @media screen and (max-width: 425px) {
+    height: calc(100% - 15px);
+  }
+  @media screen and (max-width: 1024px) {
+    .project {
+      h2 {
+        font-size: 1.5rem;
+      }
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
+  svg {
+    width: 40px;
+    height: 40px;
+  }
+}
