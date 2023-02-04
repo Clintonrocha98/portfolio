@@ -1,12 +1,18 @@
 .containerProjects {
   height: 100vh;
+  h1 {
+    font-family: "Press Start 2P", cursive;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 10px;
+  }
 }
 .projects {
   display: flex;
   flex-direction: column;
   gap: 10px;
   overflow: auto;
-  height: calc(100% - 65px);
+  height: calc(100% - 121px);
   padding-right: 5px;
 
   &::-webkit-scrollbar {

@@ -10,8 +10,10 @@ import {
   IconEye,
   IconGit,
 } from "../SVG/index";
+import { useTranslation } from "react-i18next";
 
 function Icons(topic) {
+
   const mapping = {
     css: <IconCss key={topic} title={topic} />,
     html: <IconHtml key={topic} title={topic} />,
@@ -21,12 +23,16 @@ function Icons(topic) {
   };
   return mapping[topic] || null;
 }
-function Projects() {
-  const user = useContext(UserContext);
 
+function Projects() {
+
+  const user = useContext(UserContext);
+  const { t } = useTranslation();
+  
   return (
     <>
       <aside className={styles.containerProjects + " animeRight"}>
+        <h1 className="animeRight">{t("titleProject")}</h1>
         <div className={styles.projects}>
           {user ? (
             user.map(({ id, name, description, html_url, homepage, topics }) =>
