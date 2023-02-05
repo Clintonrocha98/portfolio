@@ -13,7 +13,6 @@ import {
 import { useTranslation } from "react-i18next";
 
 function Icons(topic) {
-
   const mapping = {
     css: <IconCss key={topic} title={topic} />,
     html: <IconHtml key={topic} title={topic} />,
@@ -25,10 +24,9 @@ function Icons(topic) {
 }
 
 function Projects() {
-
   const user = useContext(UserContext);
   const { t } = useTranslation();
-  
+
   return (
     <>
       <aside className={styles.containerProjects + " animeRight"}>
